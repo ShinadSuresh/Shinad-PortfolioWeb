@@ -73,6 +73,7 @@ export const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="/Shinad Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-medium glow transition-all duration-300 transform hover:scale-105"
@@ -80,6 +81,7 @@ export const HeroSection = () => {
               <Download className="mr-2 h-5 w-5" />
               View Resume
             </Button>
+            </a>
             <Button 
               size="lg" 
               variant="outline" 

@@ -6,7 +6,7 @@ export const ExperienceSection = () => {
   const experiences = [
     {
       company: "Black Badger Innovation Pvt. Ltd.",
-      position: "UI Developer",
+      position: "Web Designer, UI/ UX Designer",
       duration: "April 2023 – Present",
       description: "Leading frontend development projects, creating responsive web applications using React and modern JavaScript frameworks. Collaborating with design teams to implement pixel-perfect UI components.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Redux", "Figma"],

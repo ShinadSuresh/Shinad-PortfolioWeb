@@ -1,5 +1,6 @@
 
 import { Card } from "@/components/ui/card";
+import profileImg from '../assets/shinad-portrait.jpg';
 
 export const AboutSection = () => {
   return (
@@ -36,10 +37,12 @@ export const AboutSection = () => {
 
           <div className="flex justify-center">
             <Card className="p-8 glass transform hover:scale-105 transition-all duration-300">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
-                SS
-              </div>
-            </Card>
+               <img 
+                src={profileImg} 
+                alt="Card image" 
+                className="w-full  rounded-lg filter brightness-15 contrast-45 mb-4" 
+              />
+            </Card> 
           </div>
         </div>
 

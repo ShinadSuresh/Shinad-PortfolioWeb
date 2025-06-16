@@ -7,38 +7,20 @@ export const SkillsSection = () => {
     {
       title: "Frontend Development",
       icon: "💻",
-      skills: ["HTML5", "CSS3", "SCSS", "JavaScript", "TypeScript", "React", "Redux", "Next.js", "Vue.js"],
+      skills: ["HTML5", "CSS3", "SCSS", "JavaScript", "TypeScript", "React", "Redux",],
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Styling & Frameworks",
       icon: "🎨",
-      skills: ["Tailwind CSS", "Bootstrap", "Material-UI", "Chakra UI", "Ant Design", "Styled Components", "CSS Grid", "Flexbox"],
+      skills: ["Tailwind CSS", "Bootstrap", "Material-UI", "Ant Design", "CSS Grid", "Flexbox"],
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Design Tools",
       icon: "✨",
-      skills: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Canva", "Sketch", "InVision", "Zeplin"],
+      skills: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Canva"],
       color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Development Tools",
-      icon: "🛠️",
-      skills: ["Git", "GitHub", "VS Code", "Webpack", "Vite", "npm", "Yarn", "Chrome DevTools"],
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Backend & Database",
-      icon: "🗄️",
-      skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Firebase", "Supabase", "REST APIs", "GraphQL"],
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Other Skills",
-      icon: "🚀",
-      skills: ["Responsive Design", "Cross-browser Compatibility", "Performance Optimization", "SEO", "Accessibility", "Agile", "Scrum", "Testing"],
-      color: "from-teal-500 to-blue-500"
     }
   ];
 
@@ -85,34 +67,34 @@ export const SkillsSection = () => {
         {/* Skill Level Indicators */}
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">95%</div>
+            <div className="text-3xl font-bold text-gradient mb-2">75%</div>
             <div className="text-gray-600 dark:text-gray-400">Frontend Development</div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full" style={{width: '95%'}} />
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full" style={{width: '75%'}} />
             </div>
           </div>
           
           <div className="text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">90%</div>
+            <div className="text-3xl font-bold text-gradient mb-2">60%</div>
             <div className="text-gray-600 dark:text-gray-400">UI/UX Design</div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full" style={{width: '90%'}} />
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full" style={{width: '60%'}} />
             </div>
           </div>
           
           <div className="text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">85%</div>
+            <div className="text-3xl font-bold text-gradient mb-2">70%</div>
             <div className="text-gray-600 dark:text-gray-400">React Development</div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
-              <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{width: '85%'}} />
+              <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{width: '70%'}} />
             </div>
           </div>
           
           <div className="text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">80%</div>
+            <div className="text-3xl font-bold text-gradient mb-2">30%</div>
             <div className="text-gray-600 dark:text-gray-400">Backend Integration</div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
-              <div className="bg-gradient-to-r from-orange-600 to-red-600 h-2 rounded-full" style={{width: '80%'}} />
+              <div className="bg-gradient-to-r from-orange-600 to-red-600 h-2 rounded-full" style={{width: '30%'}} />
             </div>
           </div>
         </div>
