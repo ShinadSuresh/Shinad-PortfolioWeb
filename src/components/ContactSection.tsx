@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -19,27 +20,58 @@ export const ContactSection = () => {
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  const { name, value } = e.target;
+  setFormData(prev => ({
+    ...prev,
+    [name]: value,
+  }));
+};
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setIsSubmitting(false);
-    }, 1000);
-  };
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    toast({
+      title: "Invalid Email",
+      description: "Please enter a valid email address.",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      'service_2lnsqiw',       // Replace with your EmailJS service ID
+      'template_oss5izm',      // Replace with your template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      '2YZyUyVLa00c-jTXS'        // Replace with your public key
+    );
+
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for your message. I'll get back to you soon!",
+    });
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (error) {
+    console.error("Email sending error:", error);
+    toast({
+      title: "Failed to Send",
+      description: "There was an error sending your message. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const contactInfo = [
     {

@@ -3,11 +3,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import kos from '../assets/kosham -Landing.jpg';
+import kos from '../assets/koshamattam-landing.png';
 import kitko from '../assets/Kitko-landing.png';
 import fin from '../assets/FinBook-Gloabl-Laning.png';
 import portfolio from '../assets/portfolioweb-landing.png';
-import karreo from '../assets/karrero-landing.png';
+import karreo from '../assets/karreo.img.png';
 import plashoe from '../assets/PLASHOE E COMMERCE.png';
 
 
@@ -15,7 +15,7 @@ export const ProjectsSection = () => {
   const projects = [
     {
       title: "KITCO Platform",
-      description: "Industrial equipment management system with inventory tracking, maintenance scheduling, and comprehensive reporting features for manufacturing companies.",
+      description: "Industrial equipment system with inventory tracking, maintenance scheduling, and reporting for manufacturers.",
       image: kitko,
       technologies: ["React", "Redux", "Express.js", "PostgreSQL", "Material-UI"],
       liveUrl: "https://kitkodm.netlify.app/",
@@ -88,7 +88,7 @@ export const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-66 object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-4 right-4">
